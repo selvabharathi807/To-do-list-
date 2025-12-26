@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.todo-card {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.todo-card h2 {
+    color: #4b4b9f;
+    font-weight: 700;
+}
+
+.task-item {
+    background: #f4f6ff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.task-item.completed {
+    background: #d1fae5;
+    text-decoration: line-through;
+    color: #555;
+}
+
+.task-text {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #5a6fdc;
+}
+
+.delete-btn {
+    color: #ef4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/* Checkbox Marker */
+.task-check {
+    width: 20px;
+    height: 20px;
+    accent-color: #22c55e;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+/* Slide delete animation */
+.task-item.removing {
+    transform: translateX(120%);
+    opacity: 0;
+}
+
+/* Smooth animation */
+.task-item {
+    transition: all 0.4s ease;
+}
